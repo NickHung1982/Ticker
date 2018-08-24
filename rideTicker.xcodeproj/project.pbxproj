@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		373E27F82130412B0003FFDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E27F72130412B0003FFDF /* AppDelegate.swift */; };
+		373E27FA2130412B0003FFDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E27F92130412B0003FFDF /* ViewController.swift */; };
+		373E27FD2130412B0003FFDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373E27FB2130412B0003FFDF /* Main.storyboard */; };
+		373E27FF2130412F0003FFDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373E27FE2130412F0003FFDF /* Assets.xcassets */; };
+		373E28022130412F0003FFDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373E28002130412F0003FFDF /* LaunchScreen.storyboard */; };
+		373E280D213041300003FFDF /* rideTickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E280C213041300003FFDF /* rideTickerTests.swift */; };
+		373E2818213041310003FFDF /* rideTickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E2817213041310003FFDF /* rideTickerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		373E2809213041300003FFDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 373E27EC2130412B0003FFDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373E27F32130412B0003FFDF;
+			remoteInfo = rideTicker;
+		};
+		373E2814213041310003FFDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 373E27EC2130412B0003FFDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373E27F32130412B0003FFDF;
+			remoteInfo = rideTicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		373E27F42130412B0003FFDF /* rideTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rideTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		373E27F72130412B0003FFDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		373E27F92130412B0003FFDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		373E27FC2130412B0003FFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		373E27FE2130412F0003FFDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		373E28012130412F0003FFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		373E28032130412F0003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373E2808213041300003FFDF /* rideTickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rideTickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		373E280C213041300003FFDF /* rideTickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rideTickerTests.swift; sourceTree = "<group>"; };
+		373E280E213041310003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373E2813213041310003FFDF /* rideTickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rideTickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		373E2817213041310003FFDF /* rideTickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rideTickerUITests.swift; sourceTree = "<group>"; };
+		373E2819213041310003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		373E27F12130412B0003FFDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373E2805213041300003FFDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373E2810213041310003FFDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		373E27EB2130412B0003FFDF = {
+			isa = PBXGroup;
+			children = (
+				373E27F62130412B0003FFDF /* rideTicker */,
+				373E280B213041300003FFDF /* rideTickerTests */,
+				373E2816213041310003FFDF /* rideTickerUITests */,
+				373E27F52130412B0003FFDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		373E27F52130412B0003FFDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				373E27F42130412B0003FFDF /* rideTicker.app */,
+				373E2808213041300003FFDF /* rideTickerTests.xctest */,
+				373E2813213041310003FFDF /* rideTickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		373E27F62130412B0003FFDF /* rideTicker */ = {
+			isa = PBXGroup;
+			children = (
+				373E27F72130412B0003FFDF /* AppDelegate.swift */,
+				373E27F92130412B0003FFDF /* ViewController.swift */,
+				373E27FB2130412B0003FFDF /* Main.storyboard */,
+				373E27FE2130412F0003FFDF /* Assets.xcassets */,
+				373E28002130412F0003FFDF /* LaunchScreen.storyboard */,
+				373E28032130412F0003FFDF /* Info.plist */,
+			);
+			path = rideTicker;
+			sourceTree = "<group>";
+		};
+		373E280B213041300003FFDF /* rideTickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				373E280C213041300003FFDF /* rideTickerTests.swift */,
+				373E280E213041310003FFDF /* Info.plist */,
+			);
+			path = rideTickerTests;
+			sourceTree = "<group>";
+		};
+		373E2816213041310003FFDF /* rideTickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				373E2817213041310003FFDF /* rideTickerUITests.swift */,
+				373E2819213041310003FFDF /* Info.plist */,
+			);
+			path = rideTickerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		373E27F32130412B0003FFDF /* rideTicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373E281C213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTicker" */;
+			buildPhases = (
+				373E27F02130412B0003FFDF /* Sources */,
+				373E27F12130412B0003FFDF /* Frameworks */,
+				373E27F22130412B0003FFDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rideTicker;
+			productName = rideTicker;
+			productReference = 373E27F42130412B0003FFDF /* rideTicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		373E2807213041300003FFDF /* rideTickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373E281F213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTickerTests" */;
+			buildPhases = (
+				373E2804213041300003FFDF /* Sources */,
+				373E2805213041300003FFDF /* Frameworks */,
+				373E2806213041300003FFDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				373E280A213041300003FFDF /* PBXTargetDependency */,
+			);
+			name = rideTickerTests;
+			productName = rideTickerTests;
+			productReference = 373E2808213041300003FFDF /* rideTickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		373E2812213041310003FFDF /* rideTickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373E2822213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTickerUITests" */;
+			buildPhases = (
+				373E280F213041310003FFDF /* Sources */,
+				373E2810213041310003FFDF /* Frameworks */,
+				373E2811213041310003FFDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				373E2815213041310003FFDF /* PBXTargetDependency */,
+			);
+			name = rideTickerUITests;
+			productName = rideTickerUITests;
+			productReference = 373E2813213041310003FFDF /* rideTickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		373E27EC2130412B0003FFDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = NickOwn;
+				TargetAttributes = {
+					373E27F32130412B0003FFDF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					373E2807213041300003FFDF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 373E27F32130412B0003FFDF;
+					};
+					373E2812213041310003FFDF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 373E27F32130412B0003FFDF;
+					};
+				};
+			};
+			buildConfigurationList = 373E27EF2130412B0003FFDF /* Build configuration list for PBXProject "rideTicker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 373E27EB2130412B0003FFDF;
+			productRefGroup = 373E27F52130412B0003FFDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				373E27F32130412B0003FFDF /* rideTicker */,
+				373E2807213041300003FFDF /* rideTickerTests */,
+				373E2812213041310003FFDF /* rideTickerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		373E27F22130412B0003FFDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373E28022130412F0003FFDF /* LaunchScreen.storyboard in Resources */,
+				373E27FF2130412F0003FFDF /* Assets.xcassets in Resources */,
+				373E27FD2130412B0003FFDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373E2806213041300003FFDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373E2811213041310003FFDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		373E27F02130412B0003FFDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373E27FA2130412B0003FFDF /* ViewController.swift in Sources */,
+				373E27F82130412B0003FFDF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373E2804213041300003FFDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373E280D213041300003FFDF /* rideTickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373E280F213041310003FFDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373E2818213041310003FFDF /* rideTickerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		373E280A213041300003FFDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373E27F32130412B0003FFDF /* rideTicker */;
+			targetProxy = 373E2809213041300003FFDF /* PBXContainerItemProxy */;
+		};
+		373E2815213041310003FFDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373E27F32130412B0003FFDF /* rideTicker */;
+			targetProxy = 373E2814213041310003FFDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		373E27FB2130412B0003FFDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				373E27FC2130412B0003FFDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		373E28002130412F0003FFDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				373E28012130412F0003FFDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		373E281A213041310003FFDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		373E281B213041310003FFDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		373E281D213041310003FFDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2A624895QU;
+				INFOPLIST_FILE = rideTicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		373E281E213041310003FFDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2A624895QU;
+				INFOPLIST_FILE = rideTicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		373E2820213041310003FFDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2A624895QU;
+				INFOPLIST_FILE = rideTickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rideTicker.app/rideTicker";
+			};
+			name = Debug;
+		};
+		373E2821213041310003FFDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2A624895QU;
+				INFOPLIST_FILE = rideTickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rideTicker.app/rideTicker";
+			};
+			name = Release;
+		};
+		373E2823213041310003FFDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2A624895QU;
+				INFOPLIST_FILE = rideTickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = rideTicker;
+			};
+			name = Debug;
+		};
+		373E2824213041310003FFDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2A624895QU;
+				INFOPLIST_FILE = rideTickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = rideTicker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		373E27EF2130412B0003FFDF /* Build configuration list for PBXProject "rideTicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373E281A213041310003FFDF /* Debug */,
+				373E281B213041310003FFDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373E281C213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373E281D213041310003FFDF /* Debug */,
+				373E281E213041310003FFDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373E281F213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373E2820213041310003FFDF /* Debug */,
+				373E2821213041310003FFDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373E2822213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373E2823213041310003FFDF /* Debug */,
+				373E2824213041310003FFDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 373E27EC2130412B0003FFDF /* Project object */;
+}
