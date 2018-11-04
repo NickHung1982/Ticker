@@ -9,6 +9,7 @@
 import UIKit
 import MultipeerConnectivity
 import Toast_Swift
+import AudioToolbox
 
 class mainViewController: UIViewController {
     //**** MultipeerConnectivity use ****
@@ -21,9 +22,9 @@ class mainViewController: UIViewController {
     var isConnected:Bool! //peer coneection status
     
     @IBOutlet weak var tableview: UITableView!
-    @IBOutlet weak var logoOnlySettingView: UIView!
+    @IBOutlet weak var logoOnlySettingView: singleShowModeView!
     @IBOutlet weak var connectButton: UIBarButtonItem!
-    @IBOutlet weak var logoSelectSegment: UISegmentedControl!
+ 
     //MARK:-
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class mainViewController: UIViewController {
         mcSession.delegate = self
         isConnected = false
         
-        //TODO: 把 logoOnlySettingView 獨立出一個view
+    
         logoOnlySettingView.layer.borderColor = UIColor.black.cgColor
         logoOnlySettingView.layer.borderWidth = 1.0
         
@@ -49,88 +50,15 @@ class mainViewController: UIViewController {
         //load msg to list
         msgList = DataManager.loadAll(MessageItem.self).sorted(by: {$0.createdAt < $1.createdAt})
         
-        setupSegmentItemName()
-        
         self.tableview.reloadData()
     }
-    private func setupSegmentItemName() {
-        if imageList.count == 2 {
-            for item in imageList {
-                if item.itemIdentifier == .UBER {
-                    self.logoSelectSegment.setTitle(item.itemName, forSegmentAt: 0)
-                }else if item.itemIdentifier == .Lyft {
-                    self.logoSelectSegment.setTitle(item.itemName, forSegmentAt: 1)
-                }
-                
-            }
 
-        }
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func showLogoOnlyActions(_ sender: Any) {
-        if mcSession.connectedPeers.count == 0 {
-            //Show own device
-            if self.logoSelectSegment.selectedSegmentIndex == 2 {
-                //show both
-                self.present(presentingLogoOnlyVC(), animated: true, completion: nil)
-            }else{
-                //show single logo
-                let distVC = presentingSingleLogoVC()
-                if self.logoSelectSegment.selectedSegmentIndex == 1 {
-                    distVC.logoType = riderCompany.Lyft
-                }else{
-                    distVC.logoType = riderCompany.UBER
-                }
-                self.present(distVC, animated: true, completion: nil)
-            }
-            
-        }else{
-            var msgItem:MessageItem?
-            //show on peer
-            if self.logoSelectSegment.selectedSegmentIndex == 2 {
-                //show both
-                //TODO: HOW TO SEND 2 IMAGES IN THE SAME TIME?
-                //msgItem = MessageItem(Msg: "", riderCompy: .Both, bgType: .auto, iid: UUID(), createdAt: Date(), completed: false)
-                if let firstImgData = imageList.first?.itemImageData, let secondImgData = imageList.last?.itemImageData {
-                  msgItem = MessageItem(onlyTwoPhotos: UUID(), logoImageData: firstImgData, logoImageData2: secondImgData)
-                }
-                
-                
-                
-            }else if self.logoSelectSegment.selectedSegmentIndex == 1{
-                //show single logo - lyft
-                if let imgData = imageList.filter({ $0.itemIdentifier == riderCompany.Lyft }).first?.itemImageData {
-                    msgItem = MessageItem(withPhoto: "", riderCompy: .Lyft, bgType: .auto, iid: UUID(), createdAt: Date(), completed: false, logoImageData: imgData)
-                }
-                
-                
-            }else{
-                //show single logo - uber
-                if let imgData = imageList.filter({ $0.itemIdentifier == riderCompany.UBER }).first?.itemImageData {
-                    msgItem = MessageItem(withPhoto: "", riderCompy: .UBER, bgType: .auto, iid: UUID(), createdAt: Date(), completed: false, logoImageData: imgData)
-                }
-                
-            }
-            
-            
-            do{
-                
-                let encodedData = try JSONEncoder().encode(msgItem)
-                try mcSession.send(encodedData, toPeers: mcSession.connectedPeers, with: .reliable)
-                
-                
-                
-            }catch let error{
-                NSLog("%@", "Error for sending: \(error)")
-            }
-        }
-        
-    }
-    
+
     @IBAction func showConnectivityActions(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Display Choice", message: "This device want to be Host or Client?", preferredStyle: .actionSheet)
         
@@ -190,8 +118,6 @@ class mainViewController: UIViewController {
     
 
         if mcSession.connectedPeers.count > 0  {
-            
-
             //pass logo image if not BOTH
             if msg.riderCompy != .Both {
                 guard let imgData = self.imageList.filter({ $0.itemIdentifier == msg.riderCompy}).first?.itemImageData else {
@@ -210,9 +136,6 @@ class mainViewController: UIViewController {
                 }catch let error{
                     NSLog("%@", "Error for sending: \(error)")
                 }
-            }else{
-                //TODO: pass logo for BOTH
-                
             }
 
            
@@ -286,6 +209,8 @@ extension mainViewController:MCSessionDelegate {
                 self.connectButton.tintColor = UIColor.orange
                 self.title = "Connected"
                 self.isConnected = true
+                //play system sound_vibrate
+                AudioServicesPlaySystemSound(1011)
             }
 
         case MCSessionState.connecting:
@@ -307,8 +232,7 @@ extension mainViewController:MCSessionDelegate {
     }
     //called after it has been fully received
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        //TODO: 會不會有無限迴圈的情況?
-        //session.sendFinishedMessageToSender(session, peer: peerID)
+
         //dismiss vc if now showing
         DispatchQueue.main.async {
             if var topController = UIApplication.shared.keyWindow?.rootViewController {
@@ -324,6 +248,8 @@ extension mainViewController:MCSessionDelegate {
             }
         }
 
+        //play system sound
+        AudioServicesPlaySystemSound(1003)
         
         do {
             let tmpMsgItem = try JSONDecoder().decode(MessageItem.self, from: data)
@@ -385,4 +311,60 @@ extension mainViewController:MCBrowserViewControllerDelegate {
     }
 }
 
-
+extension mainViewController:singleShowModeDelegate {
+    func singleShowButtonClick(_ segmentIndex:Int) {
+        if mcSession.connectedPeers.count == 0 {
+            //Show own device
+            if segmentIndex == 2 {
+                //show both
+                self.present(presentingLogoOnlyVC(), animated: true, completion: nil)
+            }else{
+                //show single logo
+                let distVC = presentingSingleLogoVC()
+                if segmentIndex == 1 {
+                    distVC.logoType = riderCompany.Lyft
+                }else{
+                    distVC.logoType = riderCompany.UBER
+                }
+                self.present(distVC, animated: true, completion: nil)
+            }
+            
+        }else{
+            var msgItem:MessageItem?
+            //show on peer
+            if segmentIndex == 2 {
+                //show both
+                if let firstImgData = imageList.first?.itemImageData, let secondImgData = imageList.last?.itemImageData {
+                    msgItem = MessageItem(onlyTwoPhotos: UUID(), logoImageData: firstImgData, logoImageData2: secondImgData)
+                }
+                
+                
+                
+            }else if segmentIndex == 1{
+                //show single logo - lyft
+                if let imgData = imageList.filter({ $0.itemIdentifier == riderCompany.Lyft }).first?.itemImageData {
+                    msgItem = MessageItem(withPhoto: "", riderCompy: .Lyft, bgType: .auto, iid: UUID(), createdAt: Date(), completed: false, logoImageData: imgData)
+                }
+                
+                
+            }else{
+                //show single logo - uber
+                if let imgData = imageList.filter({ $0.itemIdentifier == riderCompany.UBER }).first?.itemImageData {
+                    msgItem = MessageItem(withPhoto: "", riderCompy: .UBER, bgType: .auto, iid: UUID(), createdAt: Date(), completed: false, logoImageData: imgData)
+                }
+                
+            }
+            
+            
+            do{
+                
+                let encodedData = try JSONEncoder().encode(msgItem)
+                try mcSession.send(encodedData, toPeers: mcSession.connectedPeers, with: .reliable)
+                
+                
+            }catch let error{
+                NSLog("%@", "Error for sending: \(error)")
+            }
+        }
+    }
+}

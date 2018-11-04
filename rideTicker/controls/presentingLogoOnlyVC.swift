@@ -11,7 +11,6 @@ import UIKit
 class presentingLogoOnlyVC: UIViewController {
     @IBOutlet weak var LyftImage: UIImageView!
     @IBOutlet weak var UberImage: UIImageView!
-    @IBOutlet weak var tapView: UIView!
     
     var imageFromData_Lyft:UIImage?
     var imageFromData_Uber:UIImage?
@@ -21,8 +20,7 @@ class presentingLogoOnlyVC: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
         tapGesture.numberOfTapsRequired = 2
-        tapView.isUserInteractionEnabled = true
-        tapView.addGestureRecognizer(tapGesture)
+        self.view.addGestureRecognizer(tapGesture)
         
         if imageFromData_Lyft == nil && imageFromData_Uber == nil {
             getAllImages()
@@ -57,17 +55,15 @@ class presentingLogoOnlyVC: UIViewController {
         }
         let orient = UIApplication.shared.statusBarOrientation
         switch orient {
-        case .portrait,.portraitUpsideDown:
-            print("Portrait")
-            self.applyportraitConstraint()
-            break
-        // Do something
-        default:
-            print("LandScape")
-            self.applyLandScapeConstraint()
-            // Do something else
-            
-            break
+            case .portrait,.portraitUpsideDown:
+                print("Portrait")
+                self.applyportraitConstraint()
+                break
+
+            default:
+                print("LandScape")
+                self.applyLandScapeConstraint()
+                break
         }
     }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

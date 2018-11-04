@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ckO-pq-Jif">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ckO-pq-Jif">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="2260.8695652173915" y="-333.42391304347831"/>
         </scene>
-        <!-- -->
+        <!--Delegate-->
         <scene sceneID="u65-ld-pv6">
             <objects>
                 <viewController id="DM2-QD-dQI" customClass="mainViewController" customModule="rideTicker" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +89,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egm-vZ-sxm">
-                                                    <rect key="frame" x="354" y="0.0" width="60" height="80"/>
+                                                    <rect key="frame" x="354" y="0.0" width="60" height="79.666666666666671"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="s3U-sg-709"/>
@@ -105,7 +102,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoD-R4-6EG">
-                                                    <rect key="frame" x="293" y="0.0" width="60" height="80"/>
+                                                    <rect key="frame" x="293" y="0.0" width="60" height="79.666666666666671"/>
                                                     <color key="backgroundColor" red="1" green="0.2784313725" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="ksV-B1-AiA"/>
@@ -153,55 +150,15 @@
                                     <outlet property="delegate" destination="DM2-QD-dQI" id="S3X-eo-eCV"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wge-eg-JLk">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wge-eg-JLk" customClass="singleShowModeView" customModule="rideTicker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="592" width="414" height="80"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo only mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us9-5v-Rjh">
-                                        <rect key="frame" x="8.0000000000000071" y="8" width="122.66666666666669" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="eBE-yL-KLw"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="nIV-2C-iKz">
-                                        <rect key="frame" x="8" y="37" width="324" height="29"/>
-                                        <segments>
-                                            <segment title="Uber"/>
-                                            <segment title="Lyft"/>
-                                            <segment title="Both"/>
-                                        </segments>
-                                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hle-oW-xTq">
-                                        <rect key="frame" x="340" y="0.0" width="74" height="80"/>
-                                        <color key="backgroundColor" red="1" green="0.2784313725" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="74" id="7MD-qm-NGs"/>
-                                        </constraints>
-                                        <state key="normal" title="SHOW">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showLogoOnlyActions:" destination="DM2-QD-dQI" eventType="touchUpInside" id="vDg-1j-idB"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="nIV-2C-iKz" firstAttribute="top" secondItem="Us9-5v-Rjh" secondAttribute="bottom" constant="8" id="802-07-k4n"/>
-                                    <constraint firstItem="nIV-2C-iKz" firstAttribute="top" secondItem="Us9-5v-Rjh" secondAttribute="bottom" constant="8" id="Aq8-pR-R6f"/>
-                                    <constraint firstItem="nIV-2C-iKz" firstAttribute="leading" secondItem="wge-eg-JLk" secondAttribute="leading" constant="8" id="HlH-PX-I1q"/>
-                                    <constraint firstItem="Hle-oW-xTq" firstAttribute="leading" secondItem="nIV-2C-iKz" secondAttribute="trailing" constant="8" id="KPd-JE-EkH"/>
-                                    <constraint firstItem="Us9-5v-Rjh" firstAttribute="top" secondItem="wge-eg-JLk" secondAttribute="top" constant="8" id="dfM-Yu-y6c"/>
-                                    <constraint firstItem="Hle-oW-xTq" firstAttribute="top" secondItem="wge-eg-JLk" secondAttribute="top" id="eyx-R0-h1y"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hle-oW-xTq" secondAttribute="trailing" id="goK-Ky-G1x"/>
-                                    <constraint firstAttribute="bottom" secondItem="nIV-2C-iKz" secondAttribute="bottom" constant="15" id="ieI-hD-bZ5"/>
-                                    <constraint firstItem="Us9-5v-Rjh" firstAttribute="leading" secondItem="wge-eg-JLk" secondAttribute="leading" constant="8" id="ind-Yc-GcY"/>
                                     <constraint firstAttribute="height" constant="80" id="xUU-00-syg"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hle-oW-xTq" secondAttribute="bottom" id="zxi-0A-wTo"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="DM2-QD-dQI" id="Z3d-bN-CZ4"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -240,8 +197,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="connectButton" destination="Ses-GX-XJF" id="7e1-r8-ti7"/>
-                        <outlet property="logoOnlySettingView" destination="wge-eg-JLk" id="CeA-5R-DIl"/>
-                        <outlet property="logoSelectSegment" destination="nIV-2C-iKz" id="aDA-Ww-S99"/>
+                        <outlet property="logoOnlySettingView" destination="wge-eg-JLk" id="gUI-PK-A8R"/>
                         <outlet property="tableview" destination="c4d-Ao-3Ge" id="rJk-Fo-BiU"/>
                         <segue destination="B5x-4i-Tea" kind="show" identifier="editMsg" id="n2x-rT-BaC"/>
                     </connections>
