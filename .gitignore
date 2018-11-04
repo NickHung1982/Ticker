@@ -1,0 +1,10 @@
+rideTickerTests/*
+rideTickerUITests/*
+rideTicker/models/DataManager.swift
+rideTicker/models/MCSessionExtension.swift
+Podfile.lock
+Pods/
+RiderTicker.png
+RiderTicker2.png
+podfile
+rideTicker.xcodeproj/xcuserdata/etwarm.xcuserdatad/xcdebugger/

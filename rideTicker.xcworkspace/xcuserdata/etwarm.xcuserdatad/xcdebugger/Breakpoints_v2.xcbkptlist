@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "rideTicker/controls/addMsgVC.swift"
+            timestampString = "560967652.564124"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "initForm()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #11 (Eureka.ButtonCellOf&lt;Swift.String&gt;, Eureka.ButtonRowOf&lt;Swift.String&gt;) -&gt; () in rideTicker.addMsgVC.initForm() -&gt; ()"
+                  moduleName = "rideTicker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/etwarm/Desktop/Xcode%E5%B0%88%E6%A1%88/rideTicker/rideTicker/controls/addMsgVC.swift"
+                  timestampString = "562987054.0450391"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "2232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #11 (Eureka.ButtonCellOf&lt;Swift.String&gt;, Eureka.ButtonRowOf&lt;Swift.String&gt;) -&gt; () in rideTicker.addMsgVC.initForm() -&gt; ()"
+                  moduleName = "rideTicker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/etwarm/Desktop/Xcode%E5%B0%88%E6%A1%88/rideTicker/rideTicker/controls/addMsgVC.swift"
+                  timestampString = "562987054.072072"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "5616">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

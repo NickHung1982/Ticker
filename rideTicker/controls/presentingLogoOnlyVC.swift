@@ -100,39 +100,6 @@ class presentingLogoOnlyVC: UIViewController {
         newUberImage.center = xPoint_Uber
         self.view.addSubview(newUberImage)
         
-        
-//        self.LyftImage.translatesAutoresizingMaskIntoConstraints = false
-//        self.UberImage.translatesAutoresizingMaskIntoConstraints = false
-//        self.LyftImage.removeConstraints(self.LyftImage.constraints)
-//        self.UberImage.removeConstraints(self.UberImage.constraints)
-//        self.view.removeConstraints(self.view.constraints)
-//
-//
-//        //**** LYFT IMAGE : UP
-//        //1:1 radio
-//        let constraintAspectRadio = LyftImage.heightAnchor.constraint(equalTo: LyftImage.widthAnchor, multiplier: 1.0)
-//        //top to safearea margin is 20
-//        let constraintTop = NSLayoutConstraint(item: LyftImage, attribute: .topMargin, relatedBy: .equal, toItem: self.view, attribute: .topMargin, multiplier: 1.0, constant: 20)
-//        //centerX to superview
-//        let constraintX = NSLayoutConstraint(item: LyftImage, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
-//
-//
-//
-//        //**** UBER IMAGE : DOWN
-//        //1:1 radio
-//        let constraintAspectRadio2 = UberImage.heightAnchor.constraint(equalTo: UberImage.widthAnchor, multiplier: 1.0)
-//        //buttom to safearea margin is 20
-//        let constraintButtom = NSLayoutConstraint(item: UberImage, attribute: .bottomMargin, relatedBy: .equal, toItem: self.view, attribute: .bottomMargin, multiplier: 1.0, constant: 20)
-//        //centerX to superview
-//        let constraintX2 = NSLayoutConstraint(item: UberImage, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
-//        //2 IMAGEVIEW BETWEEN 10
-//        let verticalSpace = NSLayoutConstraint(item: self.LyftImage, attribute: .bottom, relatedBy: .equal, toItem: self.UberImage, attribute: .top, multiplier: 1, constant: 20)
-//
-//        //2 image equal with
-//        let equalWidth2Img = UberImage.widthAnchor.constraint(equalTo: LyftImage.widthAnchor, multiplier: 1.0)
-//
-//    self.view.addConstraints([constraintAspectRadio2,constraintButtom,constraintX2,verticalSpace,constraintTop,constraintX,equalWidth2Img,constraintAspectRadio])
-
 
     }
     //Only work for ipad - LandScape
@@ -159,61 +126,7 @@ class presentingLogoOnlyVC: UIViewController {
         newUberImage.center = xPoint_Uber
         self.view.addSubview(newUberImage)
         
-        
-//        newLyftImage.translatesAutoresizingMaskIntoConstraints = false
-//        newUberImage.translatesAutoresizingMaskIntoConstraints = false
-//
-//
-//        newLyftImage.widthAnchor.constraint(equalToConstant: 480.0).isActive = true
-//        newUberImage.widthAnchor.constraint(equalToConstant: 480.0).isActive = true
-//
-//        newLyftImage.trailingAnchor.constraint(equalTo: newUberImage.leadingAnchor, constant: 20).isActive = true
-//
-//
-//        newLyftImage.heightAnchor.constraint(equalTo: newUberImage.heightAnchor, multiplier: 1).isActive = true
-//        newUberImage.widthAnchor.constraint(equalTo: newLyftImage.widthAnchor, multiplier: 1).isActive = true
-//
-//        newLyftImage.heightAnchor.constraint(equalTo: newLyftImage.widthAnchor, multiplier: 1.0).isActive = true
-//        newUberImage.heightAnchor.constraint(equalTo: newUberImage.widthAnchor, multiplier: 1.0).isActive = true
-//
-//        newUberImage.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//        newLyftImage.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
-//        self.LyftImage.translatesAutoresizingMaskIntoConstraints = false
-//        self.UberImage.translatesAutoresizingMaskIntoConstraints = false
-        
-
-//        self.LyftImage.removeConstraints(self.LyftImage.constraints)
-//        self.UberImage.removeConstraints(self.UberImage.constraints)
-//        self.view.removeConstraints(self.view.constraints)
-//
-//        //**** LYFT IMAGE : LEFT
-//        //1:1 radio
-//        let constraintAspectRadio = LyftImage.heightAnchor.constraint(equalTo: LyftImage.widthAnchor, multiplier: 1.0)
-//        //left to safearea margin is 20
-//        let constraintLeft = NSLayoutConstraint(item: LyftImage, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1.0, constant: 20)
-//        //centerY to superview
-////        let constraintY = NSLayoutConstraint(item: LyftImage, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)
-//        let limitWidth_lyft = LyftImage.widthAnchor.constraint(equalToConstant: 480.0)
-//
-//        //**** UBER IMAGE : RIGHT
-//        //1:1 radio
-//        let constraintAspectRadio2 = UberImage.heightAnchor.constraint(equalTo: UberImage.widthAnchor, multiplier: 1.0)
-//        //buttom to safearea margin is 20
-//        let constraintRight = NSLayoutConstraint(item: UberImage, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1.0, constant: 20)
-//        //centerY to superview
-////        let constraintY2 = NSLayoutConstraint(item: UberImage, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)
-//
-//        //2 IMAGEVIEW BETWEEN 20
-//        let horizontalSpace = NSLayoutConstraint(item: LyftImage, attribute: .trailing, relatedBy: .equal, toItem: UberImage, attribute: .leading, multiplier: 1, constant: 20)
-//        //2 image equal with
-//        let equalWidth2Img = UberImage.widthAnchor.constraint(equalTo: LyftImage.widthAnchor, multiplier: 1.0)
-//        //2 image equal height
-//        let equalHeight2Img = LyftImage.heightAnchor.constraint(equalTo: UberImage.heightAnchor, multiplier: 1.0)
-//    self.view.addConstraints([limitWidth_lyft,constraintAspectRadio,constraintLeft,constraintAspectRadio2,constraintRight,horizontalSpace,equalWidth2Img,equalHeight2Img])
-     
-//        UberImage.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//        LyftImage.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+ 
     }
 
 
