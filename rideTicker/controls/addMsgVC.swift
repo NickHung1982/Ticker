@@ -112,6 +112,7 @@ class addMsgVC: FormViewController {
             <<< ButtonRow("Only Save"){
                 $0.tag = "SaveButNoShow"
                 $0.title = "Saved and Exit"
+                
                 }.cellUpdate { cell, row in
                     cell.backgroundColor = UIColor.lightGray
                     cell.textLabel?.textColor = UIColor.black

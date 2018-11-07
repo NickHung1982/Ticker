@@ -49,16 +49,7 @@ class settingVC: FormViewController {
                 
                 
             }
-//           //Uber
-//           let tmpImgList_uber = imgList.first
-//           if let uberimg = UIImage(data: (tmpImgList_uber?.itemImageData)!){
-//                form.setValues(["item1Name":tmpImgList_uber?.itemName,"image1":uberimg])
-//            }
-//            //lyft
-//            let tmpImgList_lyft = imgList.last
-//            if let lyftimg = UIImage(data: (tmpImgList_lyft?.itemImageData)!){
-//                form.setValues(["item2Name":tmpImgList_lyft?.itemName,"image2":lyftimg])
-//            }
+
         }
     }
     

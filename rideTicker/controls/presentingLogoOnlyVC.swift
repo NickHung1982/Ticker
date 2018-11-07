@@ -9,11 +9,13 @@
 import UIKit
 
 class presentingLogoOnlyVC: UIViewController {
-    @IBOutlet weak var LyftImage: UIImageView!
-    @IBOutlet weak var UberImage: UIImageView!
     
-    var imageFromData_Lyft:UIImage?
+    var UberImage: UIImageView!
+    var LyftImage: UIImageView!
+    
     var imageFromData_Uber:UIImage?
+    var imageFromData_Lyft:UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,17 +44,25 @@ class presentingLogoOnlyVC: UIViewController {
     @objc func tapGesture(){
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if UberImage != nil || LyftImage != nil {
+            checkCurrentOrientation()
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func checkCurrentOrientation(){
-        if UIDevice.current.userInterfaceIdiom != .pad {
-            LyftImage.image = self.imageFromData_Lyft
-            UberImage.image = self.imageFromData_Uber
-            return
+        for subview in self.view.subviews {
+            subview.removeFromSuperview()
         }
+        
         let orient = UIApplication.shared.statusBarOrientation
         switch orient {
             case .portrait,.portraitUpsideDown:
@@ -79,55 +89,51 @@ class presentingLogoOnlyVC: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
     }
     
-    //Only work for ipad - Portrait
     func applyportraitConstraint(){
-        for subview in self.view.subviews {
-            if subview is UIImageView {
-                subview.removeFromSuperview()
-            }
-        }
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
+        stackView.spacing = 10
         
+        UberImage = UIImageView(image: imageFromData_Uber)
+        LyftImage = UIImageView(image: imageFromData_Lyft)
         
-        let xPoint_Lyft = CGPoint(x: (self.view.center.x), y: (self.view.center.y / 2))
-        let newLyftImage = UIImageView.init(image: imageFromData_Lyft)
-        newLyftImage.frame.size = CGSize(width: 480, height: 480)
-        newLyftImage.center = xPoint_Lyft
-        self.view.addSubview(newLyftImage)
+        stackView.addArrangedSubview(UberImage)
+        stackView.addArrangedSubview(LyftImage)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
         
-        let xPoint_Uber = CGPoint(x: (self.view.center.x), y: (self.view.center.y/2)*3)
-        let newUberImage = UIImageView.init(image: imageFromData_Uber)
-        newUberImage.frame.size = CGSize(width: 480, height: 480)
-        newUberImage.center = xPoint_Uber
-        self.view.addSubview(newUberImage)
+        //constraint
+        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
         
-
     }
-    //Only work for ipad - LandScape
     func applyLandScapeConstraint(){
-        for subview in self.view.subviews {
-            if subview is UIImageView {
-                subview.removeFromSuperview()
-            }
-        }
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
+        stackView.spacing = 10
         
+        UberImage = UIImageView(image: imageFromData_Uber)
+        LyftImage = UIImageView(image: imageFromData_Lyft)
         
-        let xPoint_Lyft = CGPoint(x: (self.view.center.x/2), y: self.view.center.y)
-        print(xPoint_Lyft)
+        stackView.addArrangedSubview(UberImage)
+        stackView.addArrangedSubview(LyftImage)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
         
-        let newLyftImage = UIImageView.init(image: imageFromData_Lyft)
-        newLyftImage.frame.size = CGSize(width: 480, height: 480)
-        newLyftImage.center = xPoint_Lyft
-        self.view.addSubview(newLyftImage)
+        //constraint
+        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
         
-        let xPoint_Uber = CGPoint(x: (self.view.center.x/2)*3, y: self.view.center.y)
-        print(xPoint_Uber)
-        let newUberImage = UIImageView.init(image: imageFromData_Uber)
-        newUberImage.frame.size = CGSize(width: 480, height: 480)
-        newUberImage.center = xPoint_Uber
-        self.view.addSubview(newUberImage)
-        
- 
     }
+
 
 
 }

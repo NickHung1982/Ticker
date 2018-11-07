@@ -30,10 +30,10 @@
 		373E28372130724A0003FFDF /* presentingTickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E28352130724A0003FFDF /* presentingTickerVC.swift */; };
 		373E28382130724A0003FFDF /* presentingTickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373E28362130724A0003FFDF /* presentingTickerVC.xib */; };
 		373E283B2130734E0003FFDF /* presentingLogoOnlyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E28392130734E0003FFDF /* presentingLogoOnlyVC.swift */; };
-		373E283C2130734E0003FFDF /* presentingLogoOnlyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373E283A2130734E0003FFDF /* presentingLogoOnlyVC.xib */; };
 		37AB0992218AA097001CFB1D /* singleShowModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB0991218AA097001CFB1D /* singleShowModeView.swift */; };
 		37AB0998218AA271001CFB1D /* singleShowModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AB0997218AA271001CFB1D /* singleShowModeView.xib */; };
 		37AB099C218E7D08001CFB1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AB099B218E7D07001CFB1D /* AudioToolbox.framework */; };
+		37AB099D21912FA7001CFB1D /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737AB81214B35850062EB8D /* ImageItem.swift */; };
 		37FD2A362161BE62007DE665 /* MCSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD2A352161BE62007DE665 /* MCSessionExtension.swift */; };
 		37FD2A38216F9C85007DE665 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD2A37216F9C85007DE665 /* CoreGraphics.framework */; };
 		37FD2A3A216F9C8C007DE665 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD2A39216F9C8C007DE665 /* QuartzCore.framework */; };
@@ -88,7 +88,6 @@
 		373E28352130724A0003FFDF /* presentingTickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentingTickerVC.swift; sourceTree = "<group>"; };
 		373E28362130724A0003FFDF /* presentingTickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = presentingTickerVC.xib; sourceTree = "<group>"; };
 		373E28392130734E0003FFDF /* presentingLogoOnlyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentingLogoOnlyVC.swift; sourceTree = "<group>"; };
-		373E283A2130734E0003FFDF /* presentingLogoOnlyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = presentingLogoOnlyVC.xib; sourceTree = "<group>"; };
 		37AB0991218AA097001CFB1D /* singleShowModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleShowModeView.swift; sourceTree = "<group>"; };
 		37AB0997218AA271001CFB1D /* singleShowModeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = singleShowModeView.xib; sourceTree = "<group>"; };
 		37AB099B218E7D07001CFB1D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -230,7 +229,6 @@
 			children = (
 				3737AB782139865F0062EB8D /* presentingSingleLogoVC.xib */,
 				373E28362130724A0003FFDF /* presentingTickerVC.xib */,
-				373E283A2130734E0003FFDF /* presentingLogoOnlyVC.xib */,
 			);
 			path = others;
 			sourceTree = "<group>";
@@ -380,7 +378,6 @@
 			files = (
 				373E28022130412F0003FFDF /* LaunchScreen.storyboard in Resources */,
 				373E28382130724A0003FFDF /* presentingTickerVC.xib in Resources */,
-				373E283C2130734E0003FFDF /* presentingLogoOnlyVC.xib in Resources */,
 				373E27FF2130412F0003FFDF /* Assets.xcassets in Resources */,
 				3737AB7A2139865F0062EB8D /* presentingSingleLogoVC.xib in Resources */,
 				37AB0998218AA271001CFB1D /* singleShowModeView.xib in Resources */,
@@ -508,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AB099D21912FA7001CFB1D /* ImageItem.swift in Sources */,
 				373E280D213041300003FFDF /* rideTickerTests.swift in Sources */,
 				373E282B213047DB0003FFDF /* DataManager.swift in Sources */,
 				373E282E213049AC0003FFDF /* MessageItem.swift in Sources */,

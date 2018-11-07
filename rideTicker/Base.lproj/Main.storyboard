@@ -206,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="1384.8" y="390.85457271364322"/>
         </scene>
-        <!--Add MsgVC-->
+        <!--New Message-->
         <scene sceneID="cMe-dT-Ewr">
             <objects>
-                <viewController id="B5x-4i-Tea" customClass="addMsgVC" customModule="rideTicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Message" id="B5x-4i-Tea" customClass="addMsgVC" customModule="rideTicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hf0-LE-Qbh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
