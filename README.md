@@ -7,8 +7,10 @@ Features:
 
 Screenshot:
 <b>iPad</b>
+<br />
 ![ipad version](https://github.com/NickHung1982/Ticker/blob/master/iPadSample1.png)
 <br />
 
 <b>iPhone</b>
+<br />
 ![iphone version](https://github.com/NickHung1982/Ticker/blob/master/iphoneSample1.PNG)
