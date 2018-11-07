@@ -7,4 +7,4 @@ Features:
 
 ![ipad version](https://github.com/NickHung1982/Ticker/blob/master/iPadSample1.png)
 <br />
-![iphone version](https://github.com/NickHung1982/Ticker/blob/master/iPhoneSample1.PNG)
+![iphone version](https://github.com/NickHung1982/Ticker/blob/master/iphoneSample1.PNG)
