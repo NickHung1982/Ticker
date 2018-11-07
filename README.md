@@ -5,6 +5,6 @@ Features:
 1. Show message with icon on own device other device.
 2. Can show icon separately.
 
-<img src="https://imgur.com/A3hEmh2" style="height:400px;width:400px" alt="ipad version" />
+![ipad version](https://github.com/NickHung1982/Ticker/blob/master/iPadSample1.png)
 <br />
-<img src="https://imgur.com/qhoz8WH" alt="ipad version" />
+![iphone version](https://github.com/NickHung1982/Ticker/blob/master/iPhoneSample1.PNG)
