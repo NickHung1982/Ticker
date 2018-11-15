@@ -11,11 +11,13 @@ import CloudKit
 import UIKit
 
 struct ImageItem: Codable{
-    var itemName: String? //name可以變
-    var itemImageData: Data? //照片
-    var itemIdentifier: riderCompany
+    
+    var itemName: String? //nickname for image, changable
+    var itemImageData: Data? //photo data
+    var itemIdentifier: riderCompany //for address belong which company
     
     func saveItem() {
+        //all image file name must start with ImgItem_
         DataManager.save(self, with: "ImgItem_\(itemIdentifier.rawValue)")
     }
     

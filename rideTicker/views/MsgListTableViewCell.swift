@@ -18,6 +18,7 @@ class MsgListTableViewCell: UITableViewCell {
     @IBOutlet weak var line2Label: UILabel!
     @IBOutlet weak var showButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
+    
     var delegate:actionCellDelegate?
     
     override func awakeFromNib() {

@@ -50,6 +50,7 @@ class mainViewController: UIViewController {
         //load msg to list
         msgList = DataManager.loadAll(MessageItem.self).sorted(by: {$0.createdAt < $1.createdAt})
         
+        logoOnlySettingView.reloadData()
         self.tableview.reloadData()
     }
 

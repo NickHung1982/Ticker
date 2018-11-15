@@ -80,9 +80,10 @@ class settingVC: FormViewController {
                 }.cellUpdate{ cell, row in
                     
                     if let rowImage = row.value {
-                        print("updated!")
+                        
                         var tmpItem = self.imgList.filter({ $0.itemIdentifier == riderCompany.UBER }).first
                         var newRowImage = rowImage
+                        //resize photo
                         if rowImage.size.width > 512 {
                             newRowImage = rowImage.resized(to: CGSize(width: 512, height: 512))
                         }
@@ -115,9 +116,10 @@ class settingVC: FormViewController {
                 $0.tag = $0.title
                 }.cellUpdate{ cell, row in
                     if let rowImage = row.value {
-                        print("2 updated!")
+                        
                         var tmpItem = self.imgList.filter({ $0.itemIdentifier == riderCompany.Lyft }).first
                         var newRowImage = rowImage
+                        //resize photo
                         if rowImage.size.width > 512 {
                             newRowImage = rowImage.resized(to: CGSize(width: 512, height: 512))
                         }

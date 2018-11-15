@@ -19,7 +19,7 @@ class presentingLogoOnlyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        //tap twice to dismiss vc
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
         tapGesture.numberOfTapsRequired = 2
         self.view.addGestureRecognizer(tapGesture)
