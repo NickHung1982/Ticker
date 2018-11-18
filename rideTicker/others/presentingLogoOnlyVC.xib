@@ -12,8 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="presentingLogoOnlyVC" customModule="rideTicker" customModuleProvider="target">
             <connections>
-                <outlet property="LyftImage" destination="wac-ru-xoI" id="bQn-hi-p0C"/>
-                <outlet property="UberImage" destination="t5J-hl-kF2" id="lYd-WL-kBr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,30 +19,7 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wac-ru-xoI">
-                    <rect key="frame" x="20" y="335" width="354" height="354"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="wac-ru-xoI" secondAttribute="height" multiplier="1:1" id="7eJ-He-BgB"/>
-                    </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t5J-hl-kF2">
-                    <rect key="frame" x="394" y="335" width="354" height="354"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="t5J-hl-kF2" secondAttribute="height" multiplier="1:1" id="dH8-1P-I46"/>
-                    </constraints>
-                </imageView>
-            </subviews>
             <color key="backgroundColor" red="0.023529411760000001" green="0.1764705882" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="t5J-hl-kF2" firstAttribute="width" secondItem="wac-ru-xoI" secondAttribute="width" id="1uQ-zn-4vP"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="t5J-hl-kF2" secondAttribute="trailing" constant="20" id="Q4h-3I-JhX"/>
-                <constraint firstItem="t5J-hl-kF2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Vaa-uv-SAg"/>
-                <constraint firstItem="wac-ru-xoI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="g4d-NG-QiI"/>
-                <constraint firstItem="t5J-hl-kF2" firstAttribute="leading" secondItem="wac-ru-xoI" secondAttribute="trailing" constant="20" id="rXv-wE-AD2"/>
-                <constraint firstItem="wac-ru-xoI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="sve-Al-H5X"/>
-                <constraint firstItem="t5J-hl-kF2" firstAttribute="height" secondItem="wac-ru-xoI" secondAttribute="height" id="zgf-Nn-dVM"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-411" y="17"/>
         </view>

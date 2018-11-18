@@ -84,8 +84,8 @@ class settingVC: FormViewController {
                         var tmpItem = self.imgList.filter({ $0.itemIdentifier == riderCompany.UBER }).first
                         var newRowImage = rowImage
                         //resize photo
-                        if rowImage.size.width > 512 {
-                            newRowImage = rowImage.resized(to: CGSize(width: 512, height: 512))
+                        if rowImage.size.width > 400 {
+                            newRowImage = rowImage.resized(to: CGSize(width: 400, height: 400))
                         }
                         
                         tmpItem?.itemImageData = UIImagePNGRepresentation(newRowImage)
@@ -120,8 +120,8 @@ class settingVC: FormViewController {
                         var tmpItem = self.imgList.filter({ $0.itemIdentifier == riderCompany.Lyft }).first
                         var newRowImage = rowImage
                         //resize photo
-                        if rowImage.size.width > 512 {
-                            newRowImage = rowImage.resized(to: CGSize(width: 512, height: 512))
+                        if rowImage.size.width > 400 {
+                            newRowImage = rowImage.resized(to: CGSize(width: 400, height: 400))
                         }
                         tmpItem?.itemImageData = UIImagePNGRepresentation(newRowImage)
                         tmpItem?.saveItem()

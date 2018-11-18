@@ -256,20 +256,24 @@ extension mainViewController:MCSessionDelegate {
             let tmpMsgItem = try JSONDecoder().decode(MessageItem.self, from: data)
             
             if tmpMsgItem.completed == true {
+                //SINGLE IMAGE WITH MESSAGE
                 let vc = presentingTickerVC()
                 vc.msgItem = tmpMsgItem
                 self.present(vc, animated: true, completion: nil)
             }else if tmpMsgItem.completed == false && tmpMsgItem.riderCompy == .Both {
+                //BOTH
                 let vc = presentingLogoOnlyVC()
                 if let imgData1 = tmpMsgItem.logoImageData, let imgData2 = tmpMsgItem.logoImageData2 {
-                    vc.imageFromData_Uber = UIImage(data: imgData1)
-                    vc.imageFromData_Lyft = UIImage(data: imgData2)
+                    vc.view.backgroundColor = UIColor.orange
+                    vc.UberImage = UIImage(data: imgData1)
+                    vc.LyftImage = UIImage(data: imgData2)
                 }
                 self.present(vc, animated: true, completion: nil)
             }else{
+                //SINGLE IMAGE
                 let vc = presentingSingleLogoVC()
                 vc.logoType = tmpMsgItem.riderCompy
-            
+        
                 if let imgData = tmpMsgItem.logoImageData {
                     vc.logoImagData = imgData
                 }
@@ -318,7 +322,7 @@ extension mainViewController:singleShowModeDelegate {
             //Show own device
             if segmentIndex == 2 {
                 //show both
-                self.present(presentingLogoOnlyVC(), animated: true, completion: nil)
+                self.present(presentingBothLogo(), animated: true, completion: nil)
             }else{
                 //show single logo
                 let distVC = presentingSingleLogoVC()

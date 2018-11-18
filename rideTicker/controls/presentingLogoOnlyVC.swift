@@ -8,14 +8,21 @@
 
 import UIKit
 
-class presentingLogoOnlyVC: UIViewController {
+final class presentingLogoOnlyVC: UIViewController {
     
-    var UberImage: UIImageView!
-    var LyftImage: UIImageView!
+    var UberImage: UIImage?
+    var LyftImage: UIImage?
     
-    var imageFromData_Uber:UIImage?
-    var imageFromData_Lyft:UIImage?
+    var UberImageView: UIImageView!
+    var LyftImageView: UIImageView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if UberImage == nil && LyftImage == nil {
+            getAllImages()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,20 +31,24 @@ class presentingLogoOnlyVC: UIViewController {
         tapGesture.numberOfTapsRequired = 2
         self.view.addGestureRecognizer(tapGesture)
         
-        if imageFromData_Lyft == nil && imageFromData_Uber == nil {
-            getAllImages()
-        }
-        
-        checkCurrentOrientation()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UberImage != nil && LyftImage != nil {
+           checkCurrentOrientation()
+        }
+    }
+
     private func getAllImages(){
         let imgList = DataManager.loadImageData()
         for item in imgList {
             if item.itemIdentifier == .Lyft {
-                self.imageFromData_Lyft = UIImage(data: item.itemImageData!)
+                LyftImage = UIImage(data: item.itemImageData!)
             }
             if item.itemIdentifier == .UBER {
-                self.imageFromData_Uber = UIImage(data: item.itemImageData!)
+                UberImage = UIImage(data: item.itemImageData!)
             }
         }
     }
@@ -46,13 +57,13 @@ class presentingLogoOnlyVC: UIViewController {
     }
     
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        if UberImage != nil || LyftImage != nil {
-            checkCurrentOrientation()
-        }
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//
+//        if UberImage != nil || LyftImage != nil {
+//            checkCurrentOrientation()
+//        }
+//    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -96,11 +107,18 @@ class presentingLogoOnlyVC: UIViewController {
         stackView.alignment = .center
         stackView.spacing = 10
         
-        UberImage = UIImageView(image: imageFromData_Uber)
-        LyftImage = UIImageView(image: imageFromData_Lyft)
+        let UberImageView = UIImageView()
+        UberImageView.contentMode = .scaleAspectFit
+        let LyftImageView = UIImageView()
+        LyftImageView.contentMode = .scaleAspectFit
         
-        stackView.addArrangedSubview(UberImage)
-        stackView.addArrangedSubview(LyftImage)
+        if UberImage != nil && LyftImage != nil {
+            UberImageView.image = UberImage
+            LyftImageView.image = LyftImage
+        }
+        
+        stackView.addArrangedSubview(UberImageView)
+        stackView.addArrangedSubview(LyftImageView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
         
@@ -118,11 +136,18 @@ class presentingLogoOnlyVC: UIViewController {
         stackView.alignment = .center
         stackView.spacing = 10
         
-        UberImage = UIImageView(image: imageFromData_Uber)
-        LyftImage = UIImageView(image: imageFromData_Lyft)
+        UberImageView = UIImageView()
+        UberImageView.contentMode = .scaleAspectFit
+        LyftImageView = UIImageView()
+        LyftImageView.contentMode = .scaleAspectFit
         
-        stackView.addArrangedSubview(UberImage)
-        stackView.addArrangedSubview(LyftImage)
+        if UberImage != nil && LyftImage != nil {
+            UberImageView.image = UberImage
+            LyftImageView.image = LyftImage
+        }
+        
+        stackView.addArrangedSubview(UberImageView)
+        stackView.addArrangedSubview(LyftImageView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
         
