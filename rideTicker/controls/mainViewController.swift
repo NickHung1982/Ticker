@@ -322,7 +322,7 @@ extension mainViewController:singleShowModeDelegate {
             //Show own device
             if segmentIndex == 2 {
                 //show both
-                self.present(presentingBothLogo(), animated: true, completion: nil)
+                self.present(presentingLogoOnlyVC(), animated: true, completion: nil)
             }else{
                 //show single logo
                 let distVC = presentingSingleLogoVC()

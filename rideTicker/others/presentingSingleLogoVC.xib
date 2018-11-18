@@ -23,6 +23,7 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QlN-8b-66o">
                     <rect key="frame" x="0.0" y="-128" width="1024" height="1024"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="QlN-8b-66o" secondAttribute="height" multiplier="1:1" id="Nns-wW-ppa"/>
                     </constraints>
