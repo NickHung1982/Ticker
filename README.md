@@ -5,6 +5,9 @@ Features:
 1. Show message with icon on own device other device.
 2. Can show icon separately.
 
+Demo video:
+https://youtu.be/uVPZl3fAPLU
+
 Screenshot:
 <b>iPad</b>
 <br />
