@@ -1,9 +1,9 @@
 rideTickerTests/
 rideTickerUITests/
-rideTicker/models/DataManager.swift
 Podfile.lock
 Pods/
 RiderTicker.png
 RiderTicker2.png
 rideTicker.xcodeproj/xcuserdata/etwarm.xcuserdatad/xcdebugger/
 rideTicker/models/MessageItem.swift
+.gitignore
