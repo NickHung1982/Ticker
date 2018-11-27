@@ -678,7 +678,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = riderTicker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nick.riderTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e8a5f83f-376a-41e8-8e24-c6781c050e27";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -700,7 +700,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = riderTicker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nick.riderTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4b555535-d4fe-4c14-8f40-3068295d2fae";
 				PROVISIONING_PROFILE_SPECIFIER = "";
