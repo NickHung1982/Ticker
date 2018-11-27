@@ -34,7 +34,6 @@
 		37AB0998218AA271001CFB1D /* singleShowModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AB0997218AA271001CFB1D /* singleShowModeView.xib */; };
 		37AB099C218E7D08001CFB1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AB099B218E7D07001CFB1D /* AudioToolbox.framework */; };
 		37AB099D21912FA7001CFB1D /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737AB81214B35850062EB8D /* ImageItem.swift */; };
-		37FD2A362161BE62007DE665 /* MCSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD2A352161BE62007DE665 /* MCSessionExtension.swift */; };
 		37FD2A38216F9C85007DE665 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD2A37216F9C85007DE665 /* CoreGraphics.framework */; };
 		37FD2A3A216F9C8C007DE665 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD2A39216F9C8C007DE665 /* QuartzCore.framework */; };
 		D419C4C3DEAE9DDC922830E3 /* Pods_rideTickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7C21D962F863CF50243DCB /* Pods_rideTickerTests.framework */; };
@@ -91,7 +90,6 @@
 		37AB0991218AA097001CFB1D /* singleShowModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleShowModeView.swift; sourceTree = "<group>"; };
 		37AB0997218AA271001CFB1D /* singleShowModeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = singleShowModeView.xib; sourceTree = "<group>"; };
 		37AB099B218E7D07001CFB1D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		37FD2A352161BE62007DE665 /* MCSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSessionExtension.swift; sourceTree = "<group>"; };
 		37FD2A37216F9C85007DE665 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		37FD2A39216F9C8C007DE665 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		57164F3A9587C0DAD292C49C /* Pods_rideTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rideTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,7 +194,6 @@
 				373E282C213049AC0003FFDF /* MessageItem.swift */,
 				3737AB7D214B264A0062EB8D /* ImageRow.swift */,
 				3737AB81214B35850062EB8D /* ImageItem.swift */,
-				37FD2A352161BE62007DE665 /* MCSessionExtension.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -485,7 +482,6 @@
 			files = (
 				373E283B2130734E0003FFDF /* presentingLogoOnlyVC.swift in Sources */,
 				3737AB7C21420B070062EB8D /* settingVC.swift in Sources */,
-				37FD2A362161BE62007DE665 /* MCSessionExtension.swift in Sources */,
 				373E28372130724A0003FFDF /* presentingTickerVC.swift in Sources */,
 				3737AB7E214B264B0062EB8D /* ImageRow.swift in Sources */,
 				3737AB7621374C4F0062EB8D /* addMsgVC.swift in Sources */,
@@ -675,17 +671,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2A624895QU;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = rideTicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nick.com.riderTicker;
+				PRODUCT_BUNDLE_IDENTIFIER = riderTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e8a5f83f-376a-41e8-8e24-c6781c050e27";
-				PROVISIONING_PROFILE_SPECIFIER = NICKUSA_riderTicker_develop;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -696,18 +692,18 @@
 			baseConfigurationReference = 90975FD78C49C5D6A1108343 /* Pods-rideTicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2A624895QU;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = rideTicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nick.com.riderTicker;
+				PRODUCT_BUNDLE_IDENTIFIER = riderTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4b555535-d4fe-4c14-8f40-3068295d2fae";
-				PROVISIONING_PROFILE_SPECIFIER = NICKUSA_riderTicker_dist;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
