@@ -153,6 +153,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wge-eg-JLk" customClass="singleShowModeView" customModule="rideTicker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="592" width="414" height="80"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="singleShowModeView">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="xUU-00-syg"/>
                                 </constraints>

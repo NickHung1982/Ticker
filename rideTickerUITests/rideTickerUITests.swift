@@ -29,6 +29,13 @@ class rideTickerUITests: XCTestCase {
         super.tearDown()
     }
     
+    func testMainPageHaveData() {
+        XCTAssertTrue(app.tables.cells.count > 0, "Tableview has no messages")
+    }
+    
+    /**
+     Test Add new message function
+     */
     func testAddNewMessage() {
         app.navigationBars["rideTicker.mainView"].buttons["Add"].tap()
         
@@ -57,17 +64,34 @@ class rideTickerUITests: XCTestCase {
         }else{
             XCTAssert(false, "SavedAndExit button not found")
         }
-                
+        
     }
-    
+    /**
+     Test Delete message function
+     */
     func testDeleteMessage() {
         //check there has row can delete
         if app.tables.cells.count == 0 {
             XCTAssert(false, "no data in row")
         }
         
+        let firstCell = app.tables.cells.element(boundBy: 0)
+        if firstCell.exists {
+            let buttonEdit = firstCell.buttons["EDIT"]
+            buttonEdit.tap()
+            
+            app.tables/*@START_MENU_TOKEN@*/.staticTexts["DELETE"]/*[[".cells.staticTexts[\"DELETE\"]",".staticTexts[\"DELETE\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+            
+        }else{
+            XCTAssert(false, "no data in row")
+        }
         
+        XCTAssertTrue(true, "Delete Message success")
     }
+    
+    /**
+     Test Edit message function
+     */
     func testEditMessage() {
         //check there has row can edit
         if app.tables.cells.count == 0 {
@@ -102,7 +126,14 @@ class rideTickerUITests: XCTestCase {
         
     }
     
+    /**
+     Test Logo only mode
+     - Test segment first button
+     - Test segment second button
+     - Test segment third button
+     */
     func testShowOnlyMode() {
+        
         
     }
     

@@ -23,14 +23,19 @@ class singleShowModeView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        let view = Bundle.main.loadNibNamed(kVIEW_XIB_FILENAME, owner: self, options: nil)?.first as! UIView
+        view.frame = self.bounds
+        self.addSubview(view)
+        
         setupUI()
     }
     
     //load xib file and setup segment texts
     private func setupUI(){
-        let view = Bundle.main.loadNibNamed(kVIEW_XIB_FILENAME, owner: self, options: nil)?.first as! UIView
-        view.frame = self.bounds
-        self.addSubview(view)
+//        let view = Bundle.main.loadNibNamed(kVIEW_XIB_FILENAME, owner: self, options: nil)?.first as! UIView
+//        view.frame = self.bounds
+//        self.addSubview(view)
         setupSegmentItemName()
     }
     

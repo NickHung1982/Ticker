@@ -36,6 +36,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95k-Fx-a41">
                     <rect key="frame" x="339" y="0.0" width="74" height="80"/>
                     <color key="backgroundColor" red="1" green="0.2784313725" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" identifier="buttonShow"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="74" id="JUG-sm-4gf"/>
                     </constraints>
