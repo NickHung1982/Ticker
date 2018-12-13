@@ -39,9 +39,9 @@ open class ImagePickerController : UIImagePickerController, TypedRowControllerTy
         delegate = self
     }
     
-    open func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        (row as? ImageRow)?.imageURL = info[UIImagePickerControllerReferenceURL] as? URL
-        row.value = info[UIImagePickerControllerOriginalImage] as? UIImage
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        (row as? ImageRow)?.imageURL = info[.imageURL] as? URL
+        row.value = info[.originalImage] as? UIImage
         onDismissCallback?(self)
     }
     

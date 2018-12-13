@@ -7,7 +7,7 @@ target 'rideTicker' do
 
   # Pods for rideTicker
   pod 'Toast-Swift'
-  pod 'Eureka'
+  pod 'Eureka', '~> 4.3.0'
 
   target 'rideTickerTests' do
     inherit! :search_paths

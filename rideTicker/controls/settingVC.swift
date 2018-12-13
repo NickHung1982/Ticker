@@ -88,7 +88,7 @@ class settingVC: FormViewController {
                             newRowImage = rowImage.resized(to: CGSize(width: 400, height: 400))
                         }
                         
-                        tmpItem?.itemImageData = UIImagePNGRepresentation(newRowImage)
+                        tmpItem?.itemImageData = newRowImage.pngData()
                         tmpItem?.saveItem()
                     }
                 }
@@ -123,23 +123,11 @@ class settingVC: FormViewController {
                         if rowImage.size.width > 400 {
                             newRowImage = rowImage.resized(to: CGSize(width: 400, height: 400))
                         }
-                        tmpItem?.itemImageData = UIImagePNGRepresentation(newRowImage)
+                        tmpItem?.itemImageData = newRowImage.pngData()
                         tmpItem?.saveItem()
                     }
                 }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    
-   
 }
 //resize image if too big
 extension UIImage {

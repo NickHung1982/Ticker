@@ -117,7 +117,6 @@ class mainViewController: UIViewController {
     
     internal func showMessageVC(_ msg:MessageItem){
     
-
         if mcSession.connectedPeers.count > 0  {
             //pass logo image if not BOTH
             if msg.riderCompy != .Both {
@@ -131,7 +130,7 @@ class mainViewController: UIViewController {
                     let encoder = JSONEncoder()
                     if let encodedData = try? encoder.encode(newMsg) {
                         
-                        try mcSession.send(encodedData, toPeers: mcSession.connectedPeers, with: .reliable)
+                        try self.prepareToSendData(encodedData)
                     }
                     
                 }catch let error{
@@ -148,7 +147,56 @@ class mainViewController: UIViewController {
         }
     }
 
+    internal func prepareToSendData(_ data: Data) throws {
+        
+        let fileController = DTFileController.main
+        let saveUrl = fileController.cachesUrl(withFileName: "Message")
+        
+        if fileController.fileExist(atUrl: saveUrl) {
+            
+            try fileController.removeFile(at: saveUrl)
+        }
+        
+        try data.write(to: saveUrl)
+        self.sendData(atUrl: saveUrl)
+    }
+    
+    internal func sendData(atUrl url: URL, at index: Int = 0) {
+        
+        let peers = mcSession.connectedPeers
+        
+        if index >= peers.count {
+            
+            return
+        }
+        
+        let peer = mcSession.connectedPeers[index]
+        let completionHandler: (Error?) -> Void = {
+            error in
+            
+            if let error = error {
+                
+                print("Got some error: \(error), at \(index)")
+            }
+            
+            self.sendData(atUrl: url, at: index + 1)
+        }
+        
+        let progress = mcSession.sendResource(at: url, withName: "Message", toPeer: peer, withCompletionHandler: completionHandler)
+        progress.unwrapped {
+            
+            
+            let _ = $0.observe(\.fractionCompleted, options: .new) {
+                
+                (progress, change) in
+                
+                print("Sending... (\(change.newValue! * 100.0)%)")
+            }
+        }
+    }
+
 }
+
 extension mainViewController:addMsgVCDelegate {
     func fireAfterSavedItem(_ msgItem: MessageItem){
         self.showMessageVC(msgItem)
