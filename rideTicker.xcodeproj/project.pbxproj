@@ -31,6 +31,9 @@
 		37AB099C218E7D08001CFB1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AB099B218E7D07001CFB1D /* AudioToolbox.framework */; };
 		37FD2A38216F9C85007DE665 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD2A37216F9C85007DE665 /* CoreGraphics.framework */; };
 		37FD2A3A216F9C8C007DE665 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD2A39216F9C8C007DE665 /* QuartzCore.framework */; };
+		5263860A21C24E6600A03DED /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263860921C24E6600A03DED /* DictionaryExtension.swift */; };
+		5263860C21C24F5100A03DED /* Appliable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263860B21C24F5100A03DED /* Appliable.swift */; };
+		5263860E21C251BE00A03DED /* DTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263860D21C251BE00A03DED /* DTNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +53,6 @@
 		373E27FE2130412F0003FFDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373E28012130412F0003FFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		373E28032130412F0003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		373E280C213041300003FFDF /* rideTickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rideTickerTests.swift; sourceTree = "<group>"; };
-		373E280E213041310003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		373E2817213041310003FFDF /* rideTickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rideTickerUITests.swift; sourceTree = "<group>"; };
-		373E2819213041310003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373E2829213047DA0003FFDF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		373E282C213049AC0003FFDF /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
 		373E2831213067AF0003FFDF /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +65,9 @@
 		37AB099B218E7D07001CFB1D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		37FD2A37216F9C85007DE665 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		37FD2A39216F9C8C007DE665 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5263860921C24E6600A03DED /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		5263860B21C24F5100A03DED /* Appliable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appliable.swift; sourceTree = "<group>"; };
+		5263860D21C251BE00A03DED /* DTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTNavigationController.swift; sourceTree = "<group>"; };
 		57164F3A9587C0DAD292C49C /* Pods_rideTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rideTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6702FFB275A62E13E40C349B /* Pods-rideTickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rideTickerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rideTickerUITests/Pods-rideTickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D7C21D962F863CF50243DCB /* Pods_rideTickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rideTickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				373E27F62130412B0003FFDF /* rideTicker */,
-				373E280B213041300003FFDF /* rideTickerTests */,
-				373E2816213041310003FFDF /* rideTickerUITests */,
 				373E27F52130412B0003FFDF /* Products */,
 				F44539266EA165B12CB37559 /* Pods */,
 				40DF600040ACD13C93B3EBE6 /* Frameworks */,
@@ -117,6 +117,7 @@
 				373E27FE2130412F0003FFDF /* Assets.xcassets */,
 				373E28002130412F0003FFDF /* LaunchScreen.storyboard */,
 				373E28032130412F0003FFDF /* Info.plist */,
+				5263860821C24E3600A03DED /* extension */,
 				373E28282130418A0003FFDF /* others */,
 				373E2827213041740003FFDF /* controls */,
 				373E2826213041660003FFDF /* views */,
@@ -125,27 +126,10 @@
 			path = rideTicker;
 			sourceTree = "<group>";
 		};
-		373E280B213041300003FFDF /* rideTickerTests */ = {
-			isa = PBXGroup;
-			children = (
-				373E280C213041300003FFDF /* rideTickerTests.swift */,
-				373E280E213041310003FFDF /* Info.plist */,
-			);
-			path = rideTickerTests;
-			sourceTree = "<group>";
-		};
-		373E2816213041310003FFDF /* rideTickerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				373E2817213041310003FFDF /* rideTickerUITests.swift */,
-				373E2819213041310003FFDF /* Info.plist */,
-			);
-			path = rideTickerUITests;
-			sourceTree = "<group>";
-		};
 		373E2825213041550003FFDF /* models */ = {
 			isa = PBXGroup;
 			children = (
+				5263860B21C24F5100A03DED /* Appliable.swift */,
 				373E2829213047DA0003FFDF /* DataManager.swift */,
 				373E282C213049AC0003FFDF /* MessageItem.swift */,
 				3737AB7D214B264A0062EB8D /* ImageRow.swift */,
@@ -166,6 +150,7 @@
 		373E2827213041740003FFDF /* controls */ = {
 			isa = PBXGroup;
 			children = (
+				5263860D21C251BE00A03DED /* DTNavigationController.swift */,
 				373E2831213067AF0003FFDF /* mainViewController.swift */,
 				373E28352130724A0003FFDF /* presentingTickerVC.swift */,
 				373E28392130734E0003FFDF /* presentingLogoOnlyVC.swift */,
@@ -206,6 +191,14 @@
 				1FDC8B680041A899B2AB5155 /* Pods_rideTickerUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5263860821C24E3600A03DED /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				5263860921C24E6600A03DED /* DictionaryExtension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		F44539266EA165B12CB37559 /* Pods */ = {
@@ -251,7 +244,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = NickOwn;
+				ORGANIZATIONNAME = Darktt;
 				TargetAttributes = {
 					373E27F32130412B0003FFDF = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -342,6 +335,7 @@
 				3737AB7C21420B070062EB8D /* settingVC.swift in Sources */,
 				373E28372130724A0003FFDF /* presentingTickerVC.swift in Sources */,
 				3737AB7E214B264B0062EB8D /* ImageRow.swift in Sources */,
+				5263860C21C24F5100A03DED /* Appliable.swift in Sources */,
 				3737AB7621374C4F0062EB8D /* addMsgVC.swift in Sources */,
 				373E282D213049AC0003FFDF /* MessageItem.swift in Sources */,
 				3737AB792139865F0062EB8D /* presentingSingleLogoVC.swift in Sources */,
@@ -350,6 +344,8 @@
 				37AB0992218AA097001CFB1D /* singleShowModeView.swift in Sources */,
 				373E28342130700A0003FFDF /* MsgListTableViewCell.swift in Sources */,
 				3737AB82214B35850062EB8D /* ImageItem.swift in Sources */,
+				5263860E21C251BE00A03DED /* DTNavigationController.swift in Sources */,
+				5263860A21C24E6600A03DED /* DictionaryExtension.swift in Sources */,
 				373E282A213047DB0003FFDF /* DataManager.swift in Sources */,
 				373E27F82130412B0003FFDF /* AppDelegate.swift in Sources */,
 			);

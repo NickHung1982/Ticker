@@ -82,30 +82,46 @@ class addMsgVC: FormViewController {
                 }.cellUpdate { cell, row in
                     cell.backgroundColor = UIColor.red
                     cell.textLabel?.textColor = UIColor.white
-                }.onCellSelection{[weak self](cell,row) in
-                    let vDict = self?.form.values(includeHidden: false)
-                    guard let line1 = vDict!["Line 1"],let line2 = vDict!["Line 2"], let rideT = vDict!["rideType"] else {
+                }.onCellSelection{[unowned self](cell,row) in
+                    
+                    let vDict = self.form.values(includeHidden: false)
+                    
+                    let line1Key = String.key("Line 1")
+                    let line2Key = String.key("Line 2")
+                    let rideTypeKey = String.key("rideType")
+                    
+                    guard let line1 = vDict[line1Key],
+                        let line2 = vDict[line2Key],
+                        let rideT = vDict[rideTypeKey] else {
                         return
                     }
                     
                     //Saved segment value
                     var selectedRider: riderCompany!
-                    for item in (self?.imgList)! {
-                        if rideT as? String == item.itemName {
-                            selectedRider = item.itemIdentifier
+                    self.imgList.forEach {
+                        
+                        if $0.itemName == rideT {
+                            
+                            selectedRider = $0.itemIdentifier
                         }
                     }
                     
-                    
-                    var tmpMsgItem = MessageItem(Msg: line1 as! String, riderCompy: selectedRider, bgType: backGroundType.night, iid: (self?.uuid)!, createdAt: Date(), completed: true)
-                    tmpMsgItem.Msg2 = line2 as? String
+                    var tmpMsgItem = MessageItem(Msg: line1, riderCompy: selectedRider, bgType: backGroundType.night, iid: self.uuid, createdAt: Date(), completed: true)
+                    tmpMsgItem.Msg2 = line2
                     tmpMsgItem.saveItem()
                     
                     //將line1 和 riderCompany 預選起來作為下次預設值
                     
                     //退回上頁並顯示
-                    self?.delegate?.fireAfterSavedItem(tmpMsgItem)
-                    self?.navigationController?.popToRootViewController(animated: true)
+                    self.delegate.unwrapped {
+                        
+                        $0.fireAfterSavedItem(tmpMsgItem)
+                    }
+                    
+                    self.navigationController.unwrapped {
+                        
+                        $0.popToRootViewController(animated: true)
+                    }
                     
             }
             
@@ -116,26 +132,38 @@ class addMsgVC: FormViewController {
                 }.cellUpdate { cell, row in
                     cell.backgroundColor = UIColor.lightGray
                     cell.textLabel?.textColor = UIColor.black
-                }.onCellSelection{[weak self](cell,row) in
-                    let vDict = self?.form.values(includeHidden: false)
+                }.onCellSelection{[unowned self](cell,row) in
                     
-                    guard let line1 = vDict!["Line 1"],let line2 = vDict!["Line 2"], let rideT = vDict!["rideType"] else {
-                        return
+                    let vDict = self.form.values(includeHidden: false)
+                    
+                    let line1Key = String.key("Line 1")
+                    let line2Key = String.key("Line 2")
+                    let rideTypeKey = String.key("rideType")
+                    
+                    guard let line1 = vDict[line1Key],
+                        let line2 = vDict[line2Key],
+                        let rideT = vDict[rideTypeKey] else {
+                            return
                     }
                     
                     //Saved segment value
                     var selectedRider: riderCompany!
-                    for item in (self?.imgList)! {
-                        if rideT as? String == item.itemName {
-                            selectedRider = item.itemIdentifier
+                    self.imgList.forEach {
+                        
+                        if $0.itemName == rideT {
+                            
+                            selectedRider = $0.itemIdentifier
                         }
                     }
                     
-                    var tmpMsgItem = MessageItem(Msg: line1 as! String, riderCompy: selectedRider, bgType: backGroundType.night, iid: (self?.uuid)!, createdAt: Date(), completed: true)
-                    tmpMsgItem.Msg2 = line2 as? String
+                    var tmpMsgItem = MessageItem(Msg: line1, riderCompy: selectedRider, bgType: backGroundType.night, iid: self.uuid, createdAt: Date(), completed: true)
+                    tmpMsgItem.Msg2 = line2
                     tmpMsgItem.saveItem()
                     
-                    self?.navigationController?.popToRootViewController(animated: true)
+                    self.navigationController.unwrapped {
+                        
+                        $0.popToRootViewController(animated: true)
+                    }
                     
             }
         
@@ -166,17 +194,5 @@ class addMsgVC: FormViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 

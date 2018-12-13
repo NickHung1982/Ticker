@@ -117,7 +117,6 @@ class mainViewController: UIViewController {
     
     internal func showMessageVC(_ msg:MessageItem){
     
-
         if mcSession.connectedPeers.count > 0  {
             //pass logo image if not BOTH
             if msg.riderCompy != .Both {
