@@ -19,12 +19,8 @@
 		373E27FD2130412B0003FFDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373E27FB2130412B0003FFDF /* Main.storyboard */; };
 		373E27FF2130412F0003FFDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373E27FE2130412F0003FFDF /* Assets.xcassets */; };
 		373E28022130412F0003FFDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373E28002130412F0003FFDF /* LaunchScreen.storyboard */; };
-		373E280D213041300003FFDF /* rideTickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E280C213041300003FFDF /* rideTickerTests.swift */; };
-		373E2818213041310003FFDF /* rideTickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E2817213041310003FFDF /* rideTickerUITests.swift */; };
 		373E282A213047DB0003FFDF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E2829213047DA0003FFDF /* DataManager.swift */; };
-		373E282B213047DB0003FFDF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E2829213047DA0003FFDF /* DataManager.swift */; };
 		373E282D213049AC0003FFDF /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E282C213049AC0003FFDF /* MessageItem.swift */; };
-		373E282E213049AC0003FFDF /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E282C213049AC0003FFDF /* MessageItem.swift */; };
 		373E2832213067AF0003FFDF /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E2831213067AF0003FFDF /* mainViewController.swift */; };
 		373E28342130700A0003FFDF /* MsgListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E28332130700A0003FFDF /* MsgListTableViewCell.swift */; };
 		373E28372130724A0003FFDF /* presentingTickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E28352130724A0003FFDF /* presentingTickerVC.swift */; };
@@ -33,29 +29,9 @@
 		37AB0992218AA097001CFB1D /* singleShowModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB0991218AA097001CFB1D /* singleShowModeView.swift */; };
 		37AB0998218AA271001CFB1D /* singleShowModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AB0997218AA271001CFB1D /* singleShowModeView.xib */; };
 		37AB099C218E7D08001CFB1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AB099B218E7D07001CFB1D /* AudioToolbox.framework */; };
-		37AB099D21912FA7001CFB1D /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737AB81214B35850062EB8D /* ImageItem.swift */; };
 		37FD2A38216F9C85007DE665 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD2A37216F9C85007DE665 /* CoreGraphics.framework */; };
 		37FD2A3A216F9C8C007DE665 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD2A39216F9C8C007DE665 /* QuartzCore.framework */; };
-		D419C4C3DEAE9DDC922830E3 /* Pods_rideTickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7C21D962F863CF50243DCB /* Pods_rideTickerTests.framework */; };
-		E9E66E293B07DA5D976A09DA /* Pods_rideTickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDC8B680041A899B2AB5155 /* Pods_rideTickerUITests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		373E2809213041300003FFDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 373E27EC2130412B0003FFDF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 373E27F32130412B0003FFDF;
-			remoteInfo = rideTicker;
-		};
-		373E2814213041310003FFDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 373E27EC2130412B0003FFDF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 373E27F32130412B0003FFDF;
-			remoteInfo = rideTicker;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0731D62FFEB253A90F0C6D5B /* Pods-rideTickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rideTickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rideTickerTests/Pods-rideTickerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,10 +50,8 @@
 		373E27FE2130412F0003FFDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373E28012130412F0003FFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		373E28032130412F0003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		373E2808213041300003FFDF /* rideTickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rideTickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		373E280C213041300003FFDF /* rideTickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rideTickerTests.swift; sourceTree = "<group>"; };
 		373E280E213041310003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		373E2813213041310003FFDF /* rideTickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rideTickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		373E2817213041310003FFDF /* rideTickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rideTickerUITests.swift; sourceTree = "<group>"; };
 		373E2819213041310003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373E2829213047DA0003FFDF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -112,22 +86,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		373E2805213041300003FFDF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D419C4C3DEAE9DDC922830E3 /* Pods_rideTickerTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		373E2810213041310003FFDF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E9E66E293B07DA5D976A09DA /* Pods_rideTickerUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -147,8 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				373E27F42130412B0003FFDF /* rideTicker.app */,
-				373E2808213041300003FFDF /* rideTickerTests.xctest */,
-				373E2813213041310003FFDF /* rideTickerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,44 +243,6 @@
 			productReference = 373E27F42130412B0003FFDF /* rideTicker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		373E2807213041300003FFDF /* rideTickerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 373E281F213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTickerTests" */;
-			buildPhases = (
-				A9F56F0F3A7709FC5005F9ED /* [CP] Check Pods Manifest.lock */,
-				373E2804213041300003FFDF /* Sources */,
-				373E2805213041300003FFDF /* Frameworks */,
-				373E2806213041300003FFDF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				373E280A213041300003FFDF /* PBXTargetDependency */,
-			);
-			name = rideTickerTests;
-			productName = rideTickerTests;
-			productReference = 373E2808213041300003FFDF /* rideTickerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		373E2812213041310003FFDF /* rideTickerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 373E2822213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTickerUITests" */;
-			buildPhases = (
-				1A51FDEDFB8C61341EC42585 /* [CP] Check Pods Manifest.lock */,
-				373E280F213041310003FFDF /* Sources */,
-				373E2810213041310003FFDF /* Frameworks */,
-				373E2811213041310003FFDF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				373E2815213041310003FFDF /* PBXTargetDependency */,
-			);
-			name = rideTickerUITests;
-			productName = rideTickerUITests;
-			productReference = 373E2813213041310003FFDF /* rideTickerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -337,14 +255,6 @@
 				TargetAttributes = {
 					373E27F32130412B0003FFDF = {
 						CreatedOnToolsVersion = 9.4.1;
-					};
-					373E2807213041300003FFDF = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 373E27F32130412B0003FFDF;
-					};
-					373E2812213041310003FFDF = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 373E27F32130412B0003FFDF;
 					};
 				};
 			};
@@ -362,8 +272,6 @@
 			projectRoot = "";
 			targets = (
 				373E27F32130412B0003FFDF /* rideTicker */,
-				373E2807213041300003FFDF /* rideTickerTests */,
-				373E2812213041310003FFDF /* rideTickerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -382,41 +290,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		373E2806213041300003FFDF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		373E2811213041310003FFDF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A51FDEDFB8C61341EC42585 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-rideTickerUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		31E904710C7108A6916A9959 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,24 +311,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rideTicker/Pods-rideTicker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A9F56F0F3A7709FC5005F9ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-rideTickerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D496AB981E5543337E7D31CC /* [CP] Check Pods Manifest.lock */ = {
@@ -497,39 +355,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		373E2804213041300003FFDF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				37AB099D21912FA7001CFB1D /* ImageItem.swift in Sources */,
-				373E280D213041300003FFDF /* rideTickerTests.swift in Sources */,
-				373E282B213047DB0003FFDF /* DataManager.swift in Sources */,
-				373E282E213049AC0003FFDF /* MessageItem.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		373E280F213041310003FFDF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				373E2818213041310003FFDF /* rideTickerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		373E280A213041300003FFDF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 373E27F32130412B0003FFDF /* rideTicker */;
-			targetProxy = 373E2809213041300003FFDF /* PBXContainerItemProxy */;
-		};
-		373E2815213041310003FFDF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 373E27F32130412B0003FFDF /* rideTicker */;
-			targetProxy = 373E2814213041310003FFDF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		373E27FB2130412B0003FFDF /* Main.storyboard */ = {
@@ -672,17 +498,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FB3JLE8VZY;
 				INFOPLIST_FILE = rideTicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nick.riderTicker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nick.riderTicker.99;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e8a5f83f-376a-41e8-8e24-c6781c050e27";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -694,104 +519,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FB3JLE8VZY;
 				INFOPLIST_FILE = rideTicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nick.riderTicker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nick.riderTicker.99;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4b555535-d4fe-4c14-8f40-3068295d2fae";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		373E2820213041310003FFDF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0731D62FFEB253A90F0C6D5B /* Pods-rideTickerTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A624895QU;
-				INFOPLIST_FILE = rideTickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTickerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rideTicker.app/rideTicker";
-			};
-			name = Debug;
-		};
-		373E2821213041310003FFDF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B8EC45F43AF3D11814CFB54 /* Pods-rideTickerTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A624895QU;
-				INFOPLIST_FILE = rideTickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTickerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rideTicker.app/rideTicker";
-			};
-			name = Release;
-		};
-		373E2823213041310003FFDF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6702FFB275A62E13E40C349B /* Pods-rideTickerUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A624895QU;
-				INFOPLIST_FILE = rideTickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTickerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = rideTicker;
-			};
-			name = Debug;
-		};
-		373E2824213041310003FFDF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6D585E49949C7C591D01C4E /* Pods-rideTickerUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A624895QU;
-				INFOPLIST_FILE = rideTickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.rideTickerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = rideTicker;
 			};
 			name = Release;
 		};
@@ -812,24 +550,6 @@
 			buildConfigurations = (
 				373E281D213041310003FFDF /* Debug */,
 				373E281E213041310003FFDF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		373E281F213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTickerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				373E2820213041310003FFDF /* Debug */,
-				373E2821213041310003FFDF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		373E2822213041310003FFDF /* Build configuration list for PBXNativeTarget "rideTickerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				373E2823213041310003FFDF /* Debug */,
-				373E2824213041310003FFDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

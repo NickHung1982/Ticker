@@ -118,9 +118,9 @@ public class DataManager {
             }
             //use default value if no image found
             if modelObjects.count == 0 {
-                let itemUber = ImageItem.init(itemName: "Uber", itemImageData: UIImagePNGRepresentation(#imageLiteral(resourceName: "Uber512.png")), itemIdentifier: .UBER)
+                let itemUber = ImageItem.init(itemName: "Uber", itemImageData: #imageLiteral(resourceName: "Uber512.png").pngData(), itemIdentifier: .UBER)
                 itemUber.saveItem()
-                let itemLyft = ImageItem.init(itemName: "Lyft", itemImageData: UIImagePNGRepresentation(#imageLiteral(resourceName: "car.png")), itemIdentifier: .Lyft)
+                let itemLyft = ImageItem.init(itemName: "Lyft", itemImageData: #imageLiteral(resourceName: "car.png").pngData(), itemIdentifier: .Lyft)
                 itemLyft.saveItem()
                 
                 modelObjects.append(itemUber)
