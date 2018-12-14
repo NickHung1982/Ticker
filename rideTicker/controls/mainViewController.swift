@@ -129,7 +129,7 @@ class mainViewController: UIViewController {
                 do{
                     let encoder = JSONEncoder()
                     if let encodedData = try? encoder.encode(newMsg) {
-                        
+                        //try mcSession.send(encodedData, toPeers: mcSession.connectedPeers, with: .reliable)
                         try self.prepareToSendData(encodedData)
                     }
                     
@@ -150,7 +150,7 @@ class mainViewController: UIViewController {
     internal func prepareToSendData(_ data: Data) throws {
         
         let fileController = DTFileController.main
-        let saveUrl = fileController.cachesUrl(withFileName: "Message")
+        let saveUrl = fileController.cachesUrl(withFileName: "Message.data")
         
         if fileController.fileExist(atUrl: saveUrl) {
             
@@ -179,10 +179,12 @@ class mainViewController: UIViewController {
                 print("Got some error: \(error), at \(index)")
             }
             
+            //send to next peer
             self.sendData(atUrl: url, at: index + 1)
         }
         
         let progress = mcSession.sendResource(at: url, withName: "Message", toPeer: peer, withCompletionHandler: completionHandler)
+        
         progress.unwrapped {
             
             
@@ -341,10 +343,67 @@ extension mainViewController:MCSessionDelegate {
     }
     
     func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
-        
+        print(progress.completedUnitCount)
     }
     
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
+        if let _ = error {
+            self.view.makeToast("ERROR")
+            return
+        }
+        guard let fileURL = localURL else { return }
+        //dismiss vc if now showing
+        DispatchQueue.main.async {
+            if var topController = UIApplication.shared.keyWindow?.rootViewController {
+                while let presentedViewController = topController.presentedViewController {
+                    topController = presentedViewController
+                }
+                if topController is mainViewController {
+                    
+                }else{
+                    topController.dismiss(animated: true, completion: nil)
+                }
+                
+            }
+        }
+        
+        //play system sound
+        AudioServicesPlaySystemSound(1003)
+        
+        do {
+            let data = try Data(contentsOf: fileURL)
+            let tmpMsgItem = try JSONDecoder().decode(MessageItem.self, from: data)
+            
+            if tmpMsgItem.completed == true {
+                //SINGLE IMAGE WITH MESSAGE
+                let vc = presentingTickerVC()
+                vc.msgItem = tmpMsgItem
+                self.present(vc, animated: true, completion: nil)
+            }else if tmpMsgItem.completed == false && tmpMsgItem.riderCompy == .Both {
+                //BOTH
+                let vc = presentingLogoOnlyVC()
+                if let imgData1 = tmpMsgItem.logoImageData, let imgData2 = tmpMsgItem.logoImageData2 {
+                    vc.view.backgroundColor = UIColor.orange
+                    vc.UberImage = UIImage(data: imgData1)
+                    vc.LyftImage = UIImage(data: imgData2)
+                }
+                self.present(vc, animated: true, completion: nil)
+            }else{
+                //SINGLE IMAGE
+                let vc = presentingSingleLogoVC()
+                vc.logoType = tmpMsgItem.riderCompy
+                
+                if let imgData = tmpMsgItem.logoImageData {
+                    vc.logoImagData = imgData
+                }
+                self.present(vc, animated: true, completion: nil)
+            }
+            
+            
+            
+        }catch{
+            fatalError("Unable to process recieved data")
+        }
         
     }
     
