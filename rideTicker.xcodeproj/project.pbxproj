@@ -21,11 +21,12 @@
 		373E28022130412F0003FFDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373E28002130412F0003FFDF /* LaunchScreen.storyboard */; };
 		373E282A213047DB0003FFDF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E2829213047DA0003FFDF /* DataManager.swift */; };
 		373E282D213049AC0003FFDF /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E282C213049AC0003FFDF /* MessageItem.swift */; };
-		373E2832213067AF0003FFDF /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E2831213067AF0003FFDF /* mainViewController.swift */; };
+		373E2832213067AF0003FFDF /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E2831213067AF0003FFDF /* mainVC.swift */; };
 		373E28342130700A0003FFDF /* MsgListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E28332130700A0003FFDF /* MsgListTableViewCell.swift */; };
 		373E28372130724A0003FFDF /* presentingTickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E28352130724A0003FFDF /* presentingTickerVC.swift */; };
 		373E28382130724A0003FFDF /* presentingTickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373E28362130724A0003FFDF /* presentingTickerVC.xib */; };
 		373E283B2130734E0003FFDF /* presentingLogoOnlyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E28392130734E0003FFDF /* presentingLogoOnlyVC.swift */; };
+		37AA55AD21C5984500F02FDB /* mainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA55AC21C5984500F02FDB /* mainViewModel.swift */; };
 		37AB0992218AA097001CFB1D /* singleShowModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB0991218AA097001CFB1D /* singleShowModeView.swift */; };
 		37AB0998218AA271001CFB1D /* singleShowModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AB0997218AA271001CFB1D /* singleShowModeView.xib */; };
 		37AB099C218E7D08001CFB1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AB099B218E7D07001CFB1D /* AudioToolbox.framework */; };
@@ -56,11 +57,12 @@
 		373E28032130412F0003FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373E2829213047DA0003FFDF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		373E282C213049AC0003FFDF /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
-		373E2831213067AF0003FFDF /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		373E2831213067AF0003FFDF /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
 		373E28332130700A0003FFDF /* MsgListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgListTableViewCell.swift; sourceTree = "<group>"; };
 		373E28352130724A0003FFDF /* presentingTickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentingTickerVC.swift; sourceTree = "<group>"; };
 		373E28362130724A0003FFDF /* presentingTickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = presentingTickerVC.xib; sourceTree = "<group>"; };
 		373E28392130734E0003FFDF /* presentingLogoOnlyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentingLogoOnlyVC.swift; sourceTree = "<group>"; };
+		37AA55AC21C5984500F02FDB /* mainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewModel.swift; sourceTree = "<group>"; };
 		37AB0991218AA097001CFB1D /* singleShowModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleShowModeView.swift; sourceTree = "<group>"; };
 		37AB0997218AA271001CFB1D /* singleShowModeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = singleShowModeView.xib; sourceTree = "<group>"; };
 		37AB099B218E7D07001CFB1D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -114,14 +116,13 @@
 		373E27F62130412B0003FFDF /* rideTicker */ = {
 			isa = PBXGroup;
 			children = (
+				37AA55AB21C5979400F02FDB /* viewmodels */,
 				373E27F72130412B0003FFDF /* AppDelegate.swift */,
 				373E27FB2130412B0003FFDF /* Main.storyboard */,
 				373E27FE2130412F0003FFDF /* Assets.xcassets */,
 				373E28002130412F0003FFDF /* LaunchScreen.storyboard */,
 				373E28032130412F0003FFDF /* Info.plist */,
-				5263860821C24E3600A03DED /* extension */,
 				373E28282130418A0003FFDF /* others */,
-				373E2827213041740003FFDF /* controls */,
 				373E2826213041660003FFDF /* views */,
 				373E2825213041550003FFDF /* models */,
 			);
@@ -131,6 +132,7 @@
 		373E2825213041550003FFDF /* models */ = {
 			isa = PBXGroup;
 			children = (
+				5263860921C24E6600A03DED /* DictionaryExtension.swift */,
 				5263860F21C2561700A03DED /* DTFileController.swift */,
 				5263860B21C24F5100A03DED /* Appliable.swift */,
 				373E2829213047DA0003FFDF /* DataManager.swift */,
@@ -144,25 +146,18 @@
 		373E2826213041660003FFDF /* views */ = {
 			isa = PBXGroup;
 			children = (
-				373E28332130700A0003FFDF /* MsgListTableViewCell.swift */,
-				37AB099A218BE4AA001CFB1D /* singleLogoView */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		373E2827213041740003FFDF /* controls */ = {
-			isa = PBXGroup;
-			children = (
 				5263860D21C251BE00A03DED /* DTNavigationController.swift */,
-				373E2831213067AF0003FFDF /* mainViewController.swift */,
+				373E2831213067AF0003FFDF /* mainVC.swift */,
 				373E28352130724A0003FFDF /* presentingTickerVC.swift */,
 				373E28392130734E0003FFDF /* presentingLogoOnlyVC.swift */,
 				3737AB7521374C4E0062EB8D /* addMsgVC.swift */,
 				3737AB772139865F0062EB8D /* presentingSingleLogoVC.swift */,
 				3737AB7B21420B070062EB8D /* settingVC.swift */,
 				3737AB7F214B26DE0062EB8D /* ImagePickerController.swift */,
+				373E28332130700A0003FFDF /* MsgListTableViewCell.swift */,
+				37AB099A218BE4AA001CFB1D /* singleLogoView */,
 			);
-			path = controls;
+			path = views;
 			sourceTree = "<group>";
 		};
 		373E28282130418A0003FFDF /* others */ = {
@@ -172,6 +167,14 @@
 				373E28362130724A0003FFDF /* presentingTickerVC.xib */,
 			);
 			path = others;
+			sourceTree = "<group>";
+		};
+		37AA55AB21C5979400F02FDB /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				37AA55AC21C5984500F02FDB /* mainViewModel.swift */,
+			);
+			path = viewmodels;
 			sourceTree = "<group>";
 		};
 		37AB099A218BE4AA001CFB1D /* singleLogoView */ = {
@@ -194,14 +197,6 @@
 				1FDC8B680041A899B2AB5155 /* Pods_rideTickerUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5263860821C24E3600A03DED /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				5263860921C24E6600A03DED /* DictionaryExtension.swift */,
-			);
-			path = extension;
 			sourceTree = "<group>";
 		};
 		F44539266EA165B12CB37559 /* Pods */ = {
@@ -344,13 +339,14 @@
 				3737AB792139865F0062EB8D /* presentingSingleLogoVC.swift in Sources */,
 				3737AB80214B26DE0062EB8D /* ImagePickerController.swift in Sources */,
 				5263861021C2561700A03DED /* DTFileController.swift in Sources */,
-				373E2832213067AF0003FFDF /* mainViewController.swift in Sources */,
+				373E2832213067AF0003FFDF /* mainVC.swift in Sources */,
 				37AB0992218AA097001CFB1D /* singleShowModeView.swift in Sources */,
 				373E28342130700A0003FFDF /* MsgListTableViewCell.swift in Sources */,
 				3737AB82214B35850062EB8D /* ImageItem.swift in Sources */,
 				5263860E21C251BE00A03DED /* DTNavigationController.swift in Sources */,
 				5263860A21C24E6600A03DED /* DictionaryExtension.swift in Sources */,
 				373E282A213047DB0003FFDF /* DataManager.swift in Sources */,
+				37AA55AD21C5984500F02FDB /* mainViewModel.swift in Sources */,
 				373E27F82130412B0003FFDF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,7 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2A624895QU;
 				INFOPLIST_FILE = rideTicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2A624895QU;
 				INFOPLIST_FILE = rideTicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
